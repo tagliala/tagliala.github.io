@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.16/tinymce.min.js" integrity="sha256-DwA/5XvQk7JerRG73GsRcEUM+ESubaliT2xRpDtIKNA=" crossorigin="anonymous"></script>
+
+    <script>
+      var config = {
+        branding: false,
+        selector: 'textarea.tinymce',
+        menubar:   false,
+        statusbar: false,
+        min_height: '100%',
+        toolbar:   'undo redo | bold italic'
+                   + ' | alignleft aligncenter alignright alignjustif'
+                   + ' | bullist numlist | indent outdent | table | wordcount | code',
+        content_style: 'ol>li>ol>li{ list-style-type: lower-alpha; }'
+                       + 'table { width: 100%; border: solid 1px; border-collapse: collapse; td, th { border: solid 1px; padding: 3px; } }'
+                       + 'h1, h2, h3, h4, h5, h6 { font-size: 14px; font-weight: 600; }',
+        plugins: 'autoresize paste lists table wordcount code',
+        valid_elements: 'a[href|target=_blank],strong/b,br,p,em/i',
+        invalid_elements: '#p'
+      };
+
+      tinyMCE.init(config);
+    </script>
+    <style>
+      html,
+      body,
+      form {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .tox-tinymce {
+          min-height: 100% !important;
+      }
+    </style>
+    <title>TinyMCE</title>
+  </head>
+  <body>
+    <form>
+      <textarea class="tinymce"></textarea>
+    </form>
+  </body>
+</html>
