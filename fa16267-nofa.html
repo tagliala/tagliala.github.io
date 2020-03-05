@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var doc = window.document;
+        var ss = doc.createElement("link");
+        ss.rel = "stylesheet";
+        ss.href = 'https://fonts.googleapis.com/css?family=Roboto&display=swap';
+        var refs = doc.getElementsByTagName("head")[0].childNodes;
+        ref = refs[ refs.length - 1];
+        ref.parentNode.insertBefore(ss, (ref.nextSibling));
+      });
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Roboto, sans-serif;
+      }
+
+      .container-fullwidth {
+        max-width: 1200px;
+        height: 100vh;
+      }
+
+      .header {
+        height: 20%;
+        background-color: #d35400;
+        width: 100vw;
+      }
+
+      .main {
+        height: 80%;
+        color: white;
+        background-color: #34495e;
+        width: 100vw;
+      }
+
+      p {
+        padding: 1em;
+      }
+
+      a {
+        color: white;
+      }
+    </style>
+    <title>Font Awesome #16274</title>
+  </head>
+  <body>
+    <div class="container-fullwidth">
+      <div class="header"></div>
+      <div class="main">
+        <p>Try to resize the page with Firefox 73.0.1, you should see white areas when enlerging or scrollbars when reducing.<br>This issue seems to appear only when an external stylesheet with a <code>font-face</code> declaration is dinamically added to the page.<br>Ref: <a href="https://github.com/FortAwesome/Font-Awesome/issues/16267">FortAwesome/Font-Awesome#16267</a></p>
+      </div>
+    </div>
+  </body>
+</html>
